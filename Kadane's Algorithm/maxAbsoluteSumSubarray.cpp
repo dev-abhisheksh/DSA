@@ -12,9 +12,9 @@ int maximumAbsoluteSumOfAnySubarray(vector<int> &nums)
 
     for (int i = 0; i < nums.size(); i++)
     {
-        maxSubarray = max(maxSubarray + nums[i], nums[i]);
-        minSubarray = min(minSubarray + nums[i], nums[i]);
-        ans = max(ans, max(maxSubarray, minSubarray));
+        maxSubarray = max(maxSubarray + nums[i], nums[i]); //stores the max value
+        minSubarray = min(minSubarray + nums[i], nums[i]); //stores the min value
+        ans = max(ans, max(maxSubarray, minSubarray));     //including ans variable so that does not loose data on every iterations
     }
 
     return ans;
