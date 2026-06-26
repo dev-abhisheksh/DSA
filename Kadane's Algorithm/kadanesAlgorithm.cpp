@@ -22,9 +22,9 @@ int maxProduct(vector<int> &nums)
                                                   // number, eg currMax = 6, currMin = -2, nums[i] = -3
                                                   // -3 * 6 = -18  currMax becomes smaller and vice-versa
                                                   // -3 * -2 = 6
-        currMax = max(nums[i], currMax + nums[i]);
-        currMin = max(nums[i], currMin + nums[i]);
-        ans = max(currMax, currMin);
+        currMax = max(nums[i], currMax * nums[i]);
+        currMin = max(nums[i], currMin * nums[i]);
+        ans = max(ans, currMin);
     }
     return ans;
 }
