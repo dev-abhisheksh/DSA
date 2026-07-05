@@ -7,7 +7,8 @@ vector<int> moveZeroes(vector<int> &nums)
     int n = nums.size();
     int left = 0, right = 0;
 
-    if(n < 1) return nums;
+    if (n < 1)
+        return nums;
 
     while (right < n)
     {
@@ -17,7 +18,7 @@ vector<int> moveZeroes(vector<int> &nums)
             left++;
         }
         right++;
-        }
+    }
 
     return nums;
 }
